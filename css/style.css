@@ -11,26 +11,43 @@ header {
     background-size: cover;*/
 }
 
+.main {
+    padding: 5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'PT Serif', serif;
+}
+
+footer {
+    padding: 1em 5em 1em 5em;
+    background-color: rgba(200, 200, 200, 0.9);
+}
+
+    footer span {
+        font-family: 'PT Serif', serif;
+    }
+
 /* Nav bar styles */
 
+
+.logo {
+    margin: 2.5em 0 0 5em;
+    position: absolute;
+    background-color: white;
+    background-image: url('../images/farm_logo_large.png');
+    background-size: cover;
+    width: 220px;
+    height: 231px;
+}
+
 nav {
-    margin: 2.5em 5em 2.5em 5em;
+    display: inline-block;
+    margin: 2.5em 0 2.5em calc(5em + 220px);
     /*background-color: yellow;*/
     font-family: 'PT Serif', serif;
 }
 
-    nav .logo {
+    nav > ul {
         margin: 0;
-        display: inline-block;
-        background-color: white;
-        background-image: url('../images/farm_logo_large.png');
-        background-size: cover;
-        width: 220px;
-        height: 231px;
-    }
-
-    nav ul {
-        margin: 0 0 0 -4px;
         padding: 0;
         background-color: white;
         display: inline-block;
@@ -38,6 +55,16 @@ nav {
         list-style-type: none;
     }
 
+        /* Weird hack-y shit for default dropdown on "about" tab */
+        nav ul:not(:hover) li.about .dropdown {
+            display: inline;
+        }
+
+        nav ul:not(:hover) li.about .name {
+            border-bottom: 2px solid black;
+        }
+
+        /* All the rest of the navbar stuff */
         nav ul li {
             display: inline-block;
         }
@@ -50,16 +77,16 @@ nav {
                 }
 
                 li.menu-item:hover .name {
-                    border-bottom: 2px solid green;
+                    border-bottom: 2px solid black;
                 }
 
                 li.menu-item .dropdown {
                     display: none;
                     position: absolute;
                     padding: 1em;
-                    background-color: rgba(251, 251, 251, 0.95);
+                    background-color: rgba(251, 251, 251, 0.60);
                     color: rgb(105, 105, 105);
-                    border-left: 2px solid green;
+                    border-left: 2px solid black;
                 }
 
                 li.menu-item:hover .dropdown {
@@ -75,27 +102,59 @@ nav {
                     border-bottom: 2px solid #16249B;
                 }
 
+                li.menu-item:hover .name.wwoof {
+                    border-bottom: 2px solid green;
+                }
+
                 li.menu-item div.wwoof a {
                     color: #007B0C;
                     text-decoration: none;
                 }
 
-/* Nav bar - product styles */
-li.product {
+/* Nav bar - about tab styles */
+li.about .dropdown {
+    font-size: 0.83em;
+    width: 40em;
+}
+
+li.about label[for=map-toggle] {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+li.about iframe#map {
+    display: none;
+    margin-top: 1em;
+}
+
+li.about input:checked ~ iframe#map {
     display: block;
 }
 
-.main {
-    padding: 5em;
-    background-color: rgba(255, 255, 255, 0.7);
+/* Nav bar - product styles */
+ul.products {
+    width: 30em;
+    background-color: white;
+    padding: 1em 0 1em 0;
+}
+
+li.product {
+    height: 7em;
+    width: 100%;
+}
+
+li.product img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+li.product p {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+}
+
+li.product span {
     font-family: 'PT Serif', serif;
 }
-
-footer {
-    padding: 1em 5em 1em 5em;
-    background-color: rgba(200, 200, 200, 0.9);
-}
-
-    footer span {
-        font-family: 'PT Serif', serif;
-    }
