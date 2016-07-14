@@ -11,11 +11,19 @@ header {
     background-size: cover;*/
 }
 
-.main {
-    padding: 5em;
-    background-color: rgba(255, 255, 255, 0.7);
+article {
+    position: absolute;
+    margin: 2.5em 0 0 5em;
+    padding: 1em;
+    background-color: rgba(251, 251, 251, 0.60);
     font-family: 'PT Serif', serif;
+    color: rgb(105, 105, 105);
+    /*border-left: 2px solid black;*/
 }
+/*
+article iframe.youtube {
+    z-index: -100;
+}*/
 
 footer {
     padding: 1em 5em 1em 5em;
@@ -30,19 +38,20 @@ footer {
 
 
 .logo {
-    margin: 2.5em 0 0 5em;
-    position: absolute;
+    display: inline-block;
+    margin: 2.5em -4px 0 5em;
     background-color: white;
-    background-image: url('../images/farm_logo_large.png');
-    background-size: cover;
+}
+
+.logo > img {
     width: 220px;
     height: 231px;
 }
 
 nav {
     display: inline-block;
-    margin: 2.5em 0 2.5em calc(5em + 220px);
-    /*background-color: yellow;*/
+    margin: 2.5em 0 2.5em 0;
+    vertical-align: top;
     font-family: 'PT Serif', serif;
 }
 
@@ -112,8 +121,11 @@ nav {
                 }
 
 /* Nav bar - about tab styles */
-li.about .dropdown {
+li .dropdown {
     font-size: 0.83em;
+}
+
+li.about .dropdown {
     width: 40em;
 }
 
