@@ -4,33 +4,33 @@ import Gallery from './components/Gallery';
 const HOMEGALLERY_IMAGE_SET = [
   {
     src: './images/gallery/chicks.jpg',
-    thumbnail: './images/gallery/chicks_thumb.png'
+    caption: 'Chicks doing some hatching.'
   },
   {
     src: './images/gallery/fog.jpg',
-    thumbnail: './images/gallery/fog_thumb.png'
+    caption: 'Fog obscuring the lower slopes of Tiller\'s Top.'
   },
   {
     src: './images/gallery/forest.jpg',
-    thumbnail: './images/gallery/forest_thumb.png'
+    caption: 'The forest behind the farm.'
   },
   {
     src: './images/gallery/goats.jpg',
-    thumbnail: './images/gallery/goats_thumb.png'
+    caption: 'Goats exhibiting their preference for high places.'
   },
   {
     src: './images/gallery/goats2.jpg',
-    thumbnail: './images/gallery/goats2_thumb.png'
+    caption: 'More tomfoolery from the goats.'
   },
   {
     src: './images/gallery/mountains.jpg',
-    thumbnail: './images/gallery/mountains_thumb.png'
+    caption: 'Kulshan a.k.a. Mount Baker, as viewed from the slopes of nearby Sauk Mountain.'
   },
   {
     src: './images/gallery/skagit.jpg',
-    thumbnail: './images/gallery/skagit_thumb.png'
+    caption: 'Just another sunny day in the upper Skagit Valley.'
   }
-];
+].map((img) => ({...img, thumbnail: img.src + '.thumb' }));
 
 export default class HomeGallery extends Gallery {
   render() {

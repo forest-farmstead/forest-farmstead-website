@@ -1,1 +1,3 @@
 node_modules/
+images/gallery/*.thumb
+bundle.js
