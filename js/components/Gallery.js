@@ -109,7 +109,7 @@ const styles = {
     },
     thumbnail: {
         backgroundSize: 'cover',
-        borderRadius: 3,
+        // borderRadius: 3,
         float: 'left',
         height: THUMBNAIL_SIZE,
         margin: 5,

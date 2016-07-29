@@ -6,19 +6,19 @@ const HOMEGALLERY_IMAGE_DIR = './images/gallery/';
 const HOMEGALLERY_IMAGE_SET = [
   {
     name: 'chicks.jpg',
-    caption: 'Chicks doing some hatching.'
+    caption: 'Chicks.....hatching.....'
   },
   {
     name: 'fog.jpg',
-    caption: 'Fog obscuring the lower slopes of Tiller\'s Top.'
+    caption: 'Fog obscuring the lower slopes of Tiller\'s Top, the mountain behind our property.'
   },
   {
     name: 'forest.jpg',
-    caption: 'The forest behind the farm.'
+    caption: 'A scene from within our forest canopy.'
   },
   {
     name: 'goats.jpg',
-    caption: 'Goats exhibiting their preference for high places.'
+    caption: 'Goats displaying their preference for high places.'
   },
   {
     name: 'goats2.jpg',
@@ -26,7 +26,7 @@ const HOMEGALLERY_IMAGE_SET = [
   },
   {
     name: 'mountains.jpg',
-    caption: 'Kulshan a.k.a. Mount Baker, as viewed from the slopes of nearby Sauk Mountain.'
+    caption: 'The western Cascades and Sauk River Valley from the slopes of nearby Sauk Mountain.'
   },
   {
     name: 'skagit.jpg',
