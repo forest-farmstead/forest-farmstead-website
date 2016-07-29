@@ -1,36 +1,42 @@
 import React from 'react';
 import Gallery from './components/Gallery';
 
+const HOMEGALLERY_IMAGE_DIR = './images/gallery/';
+
 const HOMEGALLERY_IMAGE_SET = [
   {
-    src: './images/gallery/chicks.jpg',
+    name: 'chicks.jpg',
     caption: 'Chicks doing some hatching.'
   },
   {
-    src: './images/gallery/fog.jpg',
+    name: 'fog.jpg',
     caption: 'Fog obscuring the lower slopes of Tiller\'s Top.'
   },
   {
-    src: './images/gallery/forest.jpg',
+    name: 'forest.jpg',
     caption: 'The forest behind the farm.'
   },
   {
-    src: './images/gallery/goats.jpg',
+    name: 'goats.jpg',
     caption: 'Goats exhibiting their preference for high places.'
   },
   {
-    src: './images/gallery/goats2.jpg',
+    name: 'goats2.jpg',
     caption: 'More tomfoolery from the goats.'
   },
   {
-    src: './images/gallery/mountains.jpg',
+    name: 'mountains.jpg',
     caption: 'Kulshan a.k.a. Mount Baker, as viewed from the slopes of nearby Sauk Mountain.'
   },
   {
-    src: './images/gallery/skagit.jpg',
+    name: 'skagit.jpg',
     caption: 'Just another sunny day in the upper Skagit Valley.'
   }
-].map((img) => ({...img, thumbnail: img.src + '.thumb' }));
+  // ,{
+  //   name: 'river.jpg',
+  //   caption: 'The nearby Skagit River, an invaluable refuge from warm summer days'
+  // }
+].map((img) => ({...img, src: HOMEGALLERY_IMAGE_DIR + img.name, thumbnail: HOMEGALLERY_IMAGE_DIR + img.name + '.thumb'}));
 
 export default class HomeGallery extends Gallery {
   render() {

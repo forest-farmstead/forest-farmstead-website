@@ -105,7 +105,7 @@ const styles = {
     gallery: {
         marginLeft: -5,
         marginRight: -5,
-        overflow: 'hidden',
+        overflow: 'hidden'
     },
     thumbnail: {
         backgroundSize: 'cover',
