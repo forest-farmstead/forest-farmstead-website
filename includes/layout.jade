@@ -7,8 +7,8 @@ html
             title Forest Farmstead
     body
         .logo
-            a(href='index.html')
-                img(src='images/farm_logo_large.png')
+            a(href='/')
+                img(src='/images/farm_logo_large.png')
         nav
             ul
                 li.menu-item.about
@@ -46,7 +46,8 @@ html
                         .name
                             i.fa.fa-heart
                             |&nbsp;WWOOF with us
-        //- Default script included.  You could append more to this
-        //- from within a template
+        //- main.js included by default.  main.js is the output
+        //- of browserify's compilation of main.js from the root
+        //- directory
         block scripts
-            script(src='main.js')
+            script(src='/main.js')
