@@ -35,7 +35,7 @@ footer {
 
 .logo {
     display: inline-block;
-    margin: 2.5em -4px 0 5em;
+    margin: 2.5em 0 0 5em;
     background-color: white;
 }
 
@@ -67,6 +67,7 @@ nav {
 
         nav ul:not(:hover) li.about .name {
             border-bottom: 2px solid black;
+            border-right: 2px solid black;
         }
 
         /* All the rest of the navbar stuff */
@@ -83,6 +84,7 @@ nav {
 
                 li.menu-item:hover .name {
                     border-bottom: 2px solid black;
+                    border-right: 2px solid black;
                 }
 
                 li.menu-item .dropdown {
@@ -193,7 +195,7 @@ li.fb div.dropdown {
     position: absolute;
     right: 0;
     padding: 0;
-    height: 525px;
+    height: 535px;
 }
 
 li.menu-item.fb .dropdown {
