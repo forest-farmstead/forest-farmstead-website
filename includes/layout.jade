@@ -18,34 +18,13 @@ html
                         block content
                             span Hi lol
                 li.menu-item
-                    .name Products
-                    .dropdown
-                        include ./menu_products.jade
+                    include ./menu_products.jade
                 li.menu-item
-                    .name Carbon
-                    .dropdown
-                        include ./menu_carbon.jade
+                    include ./menu_carbon.jade
                 li.menu-item.fb
-                    a(target='_blank' href='https://www.facebook.com/forestfarmstead/')
-                        .name
-                            //- Weird markup is for icons
-                            i.fa.fa-facebook
-                            |&nbsp;Connect
-                    .dropdown
-                        iframe#fbfeed(
-                            src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fforestfarmstead%2F&tabs=timeline&width=320&height=530&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=161109063979941'
-                            width='320'
-                            height='530'
-                            style='border:none;overflow:hidden'
-                            scrolling='yes'
-                            frameborder='0'
-                            allowTransparency='true'
-                        )
+                    include ./menu_facebook.jade
                 li.menu-item.wwoof
-                    a(target='_blank' href='https://wwoofusa.org/farm/forest-farmstead/')
-                        .name
-                            i.fa.fa-heart
-                            |&nbsp;WWOOF with us
+                    include ./menu_wwoof.jade
         //- main.js included by default.  main.js is the output
         //- of browserify's compilation of main.js from the root
         //- directory

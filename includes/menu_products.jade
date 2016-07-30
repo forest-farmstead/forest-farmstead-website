@@ -7,29 +7,31 @@ mixin product(name, desc, image, url)
                 p= name
                 span= desc
 
-p We make a number of organic products that you want to buy from us.
-ul.products.pure-g
-    +product(
-        'Woodcutter\'s Bitters',
-        'Product description.  You can buy this for $29.95 at Costco',
-        '/images/product_bitters_logo.png',
-        '/products/woodcutters.html'
-    )
-    +product(
-        'Organic Umeboshi',
-        'Product description.  You can buy this for $29.95 at Costco',
-        '/images/product_umeboshi_logo.png',
-        '/products/umeboshi.html'
-    )
-    +product(
-        'Organic Umeboshi Vinegar',
-        'Product description.  You can buy this for $29.95 at Costco',
-        '/images/product_umeboshi_vinegar_logo.png',
-        '/products/umeboshi.html'
-    )
-    +product(
-        'Charcoal',
-        'Product description.  You can buy this for $29.95 at Costco',
-        '/images/product_charcoal_logo.png',
-        '/products/charcoal.html'
-    )
+.name Products
+.dropdown
+    p We make a number of organic products that you want to buy from us.
+    ul.products.pure-g
+        +product(
+            'Woodcutter\'s Bitters',
+            'Product description.  You can buy this for $29.95 at Costco',
+            '/images/product_bitters_logo.png',
+            '/products/woodcutters.html'
+        )
+        +product(
+            'Organic Umeboshi',
+            'Product description.  You can buy this for $29.95 at Costco',
+            '/images/product_umeboshi_logo.png',
+            '/products/umeboshi.html'
+        )
+        +product(
+            'Organic Umeboshi Vinegar',
+            'Product description.  You can buy this for $29.95 at Costco',
+            '/images/product_umeboshi_vinegar_logo.png',
+            '/products/umeboshi.html'
+        )
+        +product(
+            'Charcoal',
+            'Product description.  You can buy this for $29.95 at Costco',
+            '/images/product_charcoal_logo.png',
+            '/products/charcoal.html'
+        )
