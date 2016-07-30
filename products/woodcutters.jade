@@ -1,10 +1,18 @@
 extends ../includes/layout.jade
+include ../includes/mixins_products.jade
 
 block title
     title Forest Farmstead - Woodcutter's Bitters
 
 block menuTitle
-    .name Woodcutter's Bitters
+    .name Woodcutter's
 
 block content
-    span HI i am woodcutter's bitters
+    +product
+        +sidebar('/images/products/woodcutters.png',
+            '15',
+            '100mL bottle',
+            'Available direct from farm')
+        +description
+            h1 Woodcutter's Bitters
+            p| Woodcutters Bitters offer a unique flavoring for your beverages.  They are inspired by a real live woodcutter (our founder) cutting firewood 'round 5 o'clock-ish looking forward to a drink at the end of the day, then the intensely verdant aroma hit him as he hit a pocket of pitch in the wood with his chainsaw.  His overpowering through was "I want that flavor in my drink!!  Over the next year and a half he developed what is now Woodcutters Bitters.  It as good in soda water as it is in a martini adding depth, brightness, and the freshness of the outdoors to that after work drink.
