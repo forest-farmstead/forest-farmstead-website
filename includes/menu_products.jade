@@ -1,0 +1,30 @@
+mixin product(name, desc, image)
+    li.product
+        div.pure-u-1-3
+            img(src=image)
+        div.pure-u-2-3
+            p= name
+            span= desc
+
+p We make a number of organic products that you want to buy from us.
+ul.products.pure-g
+    +product(
+        'Woodcutter\'s Bitters',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/product_bitters_logo.png'
+    )
+    +product(
+        'Organic Umeboshi',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/product_umeboshi_logo.png'
+    )
+    +product(
+        'Organic Umeboshi Vinegar',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/product_umeboshi_vinegar_logo.png'
+    )
+    +product(
+        'Charcoal',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/product_charcoal_logo.png'
+    )

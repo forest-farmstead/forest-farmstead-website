@@ -1,0 +1,30 @@
+mixin product(name, desc, image)
+    li.product
+        div.pure-u-1-3
+            img(src=image)
+        div.pure-u-2-3
+            p= name
+            span= desc
+
+p We use several strategies to manage our carbon footprint
+ul.products.pure-g
+    +product(
+        'Forest Preservation',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/carbon_forest_logo.jpg'
+    )
+    +product(
+        'Responsible forest management',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/carbon_forest_management_logo.png'
+    )
+    +product(
+        'Biocharcoal',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/carbon_charcoal_logo.png'
+    )
+    +product(
+        'Renewable Energy',
+        'Product description.  You can buy this for $29.95 at Costco',
+        'images/carbon_renewable_logo.png'
+    )
