@@ -32,12 +32,14 @@ gulp.task('javascript', function () {
     .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('templates', function() {
-  var YOUR_LOCALS = {};
 
-  gulp.src('./*.jade')
+gulp.task('templates', function() {
+  var templates = ['./**/*.jade', '!./includes/*.jade'];
+  var LOCALS = {};
+
+  gulp.src(templates)
     .pipe(jade({
-      locals: YOUR_LOCALS
+      locals: LOCALS
     }))
     .pipe(gulp.dest('./build/'));
 });
