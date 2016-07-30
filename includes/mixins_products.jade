@@ -1,0 +1,24 @@
+mixin product
+    .pure-g
+        block
+
+mixin sidebar(photo, price, size, availability)
+    .pure-u-2-5
+        .product-image: img(src=photo)
+        span.price $#{price}
+        span.size= size
+        p= availability
+
+mixin description
+    .pure-u-3-5
+        block
+
+mixin sealOrganic
+    .seal: img(src="/images/products/seal_organic.gif"
+               height=55
+               width=55)
+
+mixin sealGF
+    .seal: img(src="/images/products/seal_gf.png"
+               height=55
+               width=55)

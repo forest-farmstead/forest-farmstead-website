@@ -4,13 +4,7 @@ body {
     background-image: url('../images/background.jpg');
     background-size: cover;
 }
-
-header {
-    /*background-color: maroon;*/
-    /*background-image: url('../images/background.jpg');
-    background-size: cover;*/
-}
-
+/*
 article {
     display: inline-block;
     margin: 2.5em auto auto 5em;
@@ -20,7 +14,7 @@ article {
     color: rgb(105, 105, 105);
     /*border-left: 2px solid black;*/
 }
-
+*/
 footer {
     padding: 1em 5em 1em 5em;
     background-color: rgba(200, 200, 200, 0.9);
@@ -76,10 +70,10 @@ nav {
         }
                 li.menu-item .name {
                     padding: 1em;
-                    border-bottom: 2px solid #FFFFFF;
                     font-weight: 700;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
+                    border: 2px solid white;
                 }
 
                 li.menu-item:hover .name {
@@ -112,12 +106,15 @@ nav {
 
                 li.menu-item.fb:hover .name {
                     border-bottom: 2px solid #16249B;
+                    border-right: 2px solid white;
+                    border-left: 2px solid #16249B;
                 }
 
                 /* WWOOF site menu item styles */
 
                 li.menu-item.wwoof:hover .name {
                     border-bottom: 2px solid green;
+                    border-right: 2px solid green;
                 }
 
                 li.menu-item.wwoof a {
@@ -217,3 +214,17 @@ div#homegallery {
     figcaption {
         font-family: 'PT Serif', serif;
     }
+
+/* Product page styles */
+.seal {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.product-image {
+    margin: 1em 1em 0.5em 0;
+}
+
+.product-image img {
+    width: 100%;
+}
