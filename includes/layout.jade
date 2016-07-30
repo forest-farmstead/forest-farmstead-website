@@ -2,6 +2,7 @@ doctype html
 html
     head
         include ./head.jade
+        //- Default title is 'Forest Farmstead'
         block title
             title Forest Farmstead
     body
@@ -27,6 +28,7 @@ html
                 li.menu-item.fb
                     a(target='_blank' href='https://www.facebook.com/forestfarmstead/')
                         .name
+                            //- Weird markup is for icons
                             i.fa.fa-facebook
                             |&nbsp;Connect
                     .dropdown
@@ -35,7 +37,7 @@ html
                             width='320'
                             height='530'
                             style='border:none;overflow:hidden'
-                            scrolling='no'
+                            scrolling='yes'
                             frameborder='0'
                             allowTransparency='true'
                         )
@@ -44,5 +46,7 @@ html
                         .name
                             i.fa.fa-heart
                             |&nbsp;WWOOF with us
+        //- Default script included.  You could append more to this
+        //- from within a template
         block scripts
             script(src='main.js')
