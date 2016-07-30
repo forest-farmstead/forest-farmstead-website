@@ -1,6 +1,29 @@
-doctype html
-html
-    include ./includes/head.jade
-    body
-        +content('About')
-            p
+extends ./includes/layout.jade
+
+block title
+    title Forest Farmstead – Home
+
+block content
+    p
+        span We are a modern, sustainable homestead done the old fashioned way.  We are located in scenic&nbsp;
+        input(type='checkbox', id='map-toggle', style={display: 'none'})
+        label(for='map-toggle')
+            span Rockport, Washington
+            i.fa.fa-angle-down
+        iframe(
+            id='map'
+            width='500px'
+            height='250px'
+            src='http://caltopo.com/m/7F1L'
+            style={border: 0}
+            frameborder='0'
+        )
+    address 55753 State Route 20/PO Box 205<br/>Rockport, WA<br/>(360) 399-3408
+    div#homegallery
+    iframe(
+        id='youtube'
+        width='564'
+        height='318'
+        src='https://www.youtube.com/embed/L7s59jp_kQE?wmode=transparent'
+        frameborder='0'
+    )

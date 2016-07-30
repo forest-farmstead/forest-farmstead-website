@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 
 var reactify = require('reactify');
+var babelify = require('babelify');
 var jade = require('gulp-jade');
 
 gulp.task('javascript', function () {
@@ -21,23 +22,34 @@ gulp.task('javascript', function () {
   });
 
   return b.bundle()
-    .pipe(source('app.js'))
+    .pipe(source('main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
         .pipe(uglify())
         .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./build/js/'));
+    .pipe(gulp.dest('./build/'));
 });
-
 
 gulp.task('templates', function() {
   var YOUR_LOCALS = {};
 
-  gulp.src('./**/*.jade')
+  gulp.src('./*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS
     }))
     .pipe(gulp.dest('./build/'));
 });
+
+gulp.task('css', function() {
+  gulp.src('css/**/**.*')
+    .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('images', function() {
+  gulp.src('images/**/**.*')
+    .pipe(gulp.dest('build/images'));
+});
+
+gulp.task('default', ['templates', 'javascript', 'css', 'images']);
