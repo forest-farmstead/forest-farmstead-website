@@ -3,11 +3,12 @@ mixin product
         block
 
 mixin sidebar(photo, price, size, availability)
-    .pure-u-2-5
+    .product-sidebar.pure-u-2-5
         .product-image: img(src=photo)
-        span.price $#{price}
-        span.size= size
-        p= availability
+        .product-description
+            span.price $#{price} /&nbsp;
+            span.size= size
+            p= availability
 
 mixin description
     .pure-u-3-5

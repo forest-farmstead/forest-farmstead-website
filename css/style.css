@@ -221,8 +221,8 @@ div#homegallery {
     margin-right: 0.5em;
 }
 
-.product-image {
-    margin: 1em 1em 0.5em 0;
+.product-image, .product-description {
+    margin: 1em;
 }
 
 .product-image img {
