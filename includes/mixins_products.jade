@@ -1,18 +1,19 @@
 mixin product
-    .pure-g
+    .pure-g.product
         block
 
 mixin sidebar(photo, price, size, availability)
     .product-sidebar.pure-u-2-5
         .product-image: img(src=photo)
-        .product-description
+        .product-info
             span.price $#{price} /&nbsp;
             span.size= size
             p= availability
 
 mixin description
     .pure-u-3-5
-        block
+        .product-description
+            block
 
 mixin sealOrganic
     .seal: img(src="/images/products/seal_organic.gif"

@@ -224,7 +224,15 @@ div#homegallery {
     margin-right: 0.5em;
 }
 
-.product-image, .product-description {
+.pure-g.product {
+    background-color: white;
+}
+
+.product-description {
+    padding: 1em;
+}
+
+.product-image, .product-info {
     margin: 1em;
 }
 
