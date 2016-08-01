@@ -230,6 +230,7 @@ div#homegallery {
 
 .product-description {
     padding: 1em;
+    color: black;
 }
 
 .product-image, .product-info {
