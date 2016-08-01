@@ -1,0 +1,8 @@
+mixin highlight
+    .highlight(style={display: 'none'})
+
+mixin background(image_name)
+    if image_name
+        .bg(style={'background-image': 'url(\'/images/backgrounds/#{image_name}\')'})
+    else
+        .bg(style={'background-image': 'url(\'/images/backgrounds/default.jpg\')'})

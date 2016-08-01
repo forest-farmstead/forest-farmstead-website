@@ -1,7 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 
-body {
-    background-image: url('../images/background.jpg');
+div.bg {
+    position: fixed;
+    top: -1em;
+    width: 100%;
+    height: calc(100% + 1em);
+    z-index: -1;
     background-size: cover;
 }
 
@@ -59,16 +63,6 @@ nav {
         list-style-type: none;
     }
 
-        /* Weird hack-y shit for default dropdown on "about" tab */
-        /*nav ul:not(:hover) li.about .dropdown {
-            display: inline;
-        }
-
-        nav ul:not(:hover) li.about .name {
-            border-bottom: 2px solid black;
-            border-right: 2px solid black;
-        }*/
-
         /* All the rest of the navbar stuff */
         nav ul li {
             display: inline-block;
@@ -94,6 +88,8 @@ nav {
 
             /* Tab selection */
             div.highlight + li.menu-item .name       { border-bottom: 2px solid black; }
+            div.highlight + li.menu-item.fb .name    { border-bottom: 2px solid #84adff; }
+            div.highlight + li.menu-item.wwoof .name { border-bottom: 2px solid #007B0C; }
 
             /* Dropdowns */
             li.menu-item .dropdown {
