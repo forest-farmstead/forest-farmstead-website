@@ -55,3 +55,5 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', ['templates', 'javascript', 'css', 'images']);
+
+gulp.task('build', ['templates', 'javascript', 'css', 'images']);
