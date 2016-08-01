@@ -4,17 +4,22 @@ body {
     background-image: url('../images/background.jpg');
     background-size: cover;
 }
-/*
+
 article {
-    display: inline-block;
-    margin: 2.5em auto auto 5em;
+    display: block;
+    margin: 0 0 0 calc(220px + 6em);
     padding: 1em;
+    width: 566px;
     background-color: rgba(251, 251, 251, 0.60);
     font-family: 'PT Serif', serif;
+    font-size: 0.83em;
     color: rgb(105, 105, 105);
-    /*border-left: 2px solid black;*/
 }
-*/
+
+article > ul {
+    list-style-type: none;
+}
+
 footer {
     padding: 1em 5em 1em 5em;
     background-color: rgba(200, 200, 200, 0.9);
@@ -28,8 +33,8 @@ footer {
 
 
 .logo {
-    display: inline-block;
-    margin: 2.5em 0 0 5em;
+    position: absolute;
+    margin: 0 0 0 5em;
     background-color: white;
 }
 
@@ -39,8 +44,8 @@ footer {
 }
 
 nav {
-    display: inline-block;
-    margin: 2.5em 0 2.5em 0;
+    display: block;
+    margin: 2.5em 0 0 calc(5em + 220px);
     vertical-align: top;
     font-family: 'PT Serif', serif;
 }
@@ -55,99 +60,100 @@ nav {
     }
 
         /* Weird hack-y shit for default dropdown on "about" tab */
-        nav ul:not(:hover) li.about .dropdown {
+        /*nav ul:not(:hover) li.about .dropdown {
             display: inline;
         }
 
         nav ul:not(:hover) li.about .name {
             border-bottom: 2px solid black;
             border-right: 2px solid black;
-        }
+        }*/
 
         /* All the rest of the navbar stuff */
         nav ul li {
             display: inline-block;
         }
-                li.menu-item .name {
-                    padding: 1em;
-                    font-weight: 700;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    border: 2px solid white;
-                }
 
-                li.menu-item:hover .name {
-                    border-bottom: 2px solid black;
-                    border-right: 2px solid black;
-                }
+            li.menu-item .name {
+                padding: 1em;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: black;
+                text-decoration: none;
+                border-bottom: 2px solid white;
+            }
 
-                li.menu-item .dropdown {
-                    display: none;
-                    position: absolute;
-                    padding: 1em;
-                    background-color: rgba(251, 251, 251, 0.60);
-                    color: rgb(105, 105, 105);
-                    border-left: 2px solid black;
-                }
+            li.menu-item a {
+                text-decoration: none;
+            }
 
-                li.menu-item:hover .dropdown {
-                    display: inline;
-                }
+            li.menu-item:hover .name {
+                border-bottom: 2px solid black;
+            }
 
-                /* Facebook menu item styles */
-                li.menu-item.fb {
-                    position: relative;
-                }
+            /* Tab selection */
+            div.highlight + li.menu-item .name       { border-bottom: 2px solid black; }
 
-                li.menu-item.fb a {
-                    color: #16249B;
-                    text-decoration: none;
-                }
+            /* Dropdowns */
+            li.menu-item .dropdown {
+                display: none;
+                position: absolute;
+                padding: 1em;
+                background-color: rgba(251, 251, 251, 0.60);
+                color: rgb(105, 105, 105);
+                border-left: 2px solid black;
+            }
 
-                li.menu-item.fb:hover .name {
-                    border-bottom: 2px solid #16249B;
-                    border-right: 2px solid white;
-                    border-left: 2px solid #16249B;
-                }
+            li.menu-item:hover .dropdown {
+                display: inline;
+            }
 
-                /* WWOOF site menu item styles */
+            /* Facebook menu item styles */
+            li.menu-item.fb {
+                position: relative;
+                border-right: 2px solid white;
+            }
 
-                li.menu-item.wwoof:hover .name {
-                    border-bottom: 2px solid green;
-                    border-right: 2px solid green;
-                }
+            li.menu-item.fb a .name {
+                color: #16249B;
+                text-decoration: none;
+            }
 
-                li.menu-item.wwoof a {
-                    color: #007B0C;
-                    text-decoration: none;
-                }
+            li.menu-item.fb:hover .name {
+                border-bottom: 2px solid white;
+            }
+
+            li.menu-item.fb:hover {
+                border-right: 2px solid #84adff;
+            }
+
+            /* WWOOF site menu item styles */
+
+            li.menu-item.wwoof:hover .name {
+                border-bottom: 2px solid green;
+                /*border-right: 2px solid green;*/
+            }
+
+            li.menu-item.wwoof a .name {
+                color: #007B0C;
+                text-decoration: none;
+            }
 
 /* Nav bar - about tab styles */
-li .dropdown {
-    font-size: 0.83em;
-}
 
-.dropdown a {
-    color: inherit;
-    cursor: pointer;
-}
-
-li.about .dropdown {
-    width: 566px;
-}
-
-li.about label[for=map-toggle] {
+p.about label[for=map-toggle] {
     text-decoration: underline;
     cursor: pointer;
     color: blue;
 }
 
-li.about iframe#map {
+p.about iframe#map {
     display: none;
     margin-top: 1em;
 }
 
-li.about input:checked ~ iframe#map {
+p.about input:checked ~ iframe#map {
     display: block;
 }
 
@@ -155,13 +161,17 @@ li.about input:checked ~ iframe#map {
 ul.products {
     width: 30em;
     padding: 0;
-    background-color: white;
+    margin-top: 1em;
 }
 
 li.product {
     height: 7em;
     width: 100%;
     padding-top: 1em;
+    background-color: white;
+    border-top: 2px solid #dedede;
+    margin-bottom: 1em;
+    color: black;
 }
 
 li.product:last-child {
@@ -190,15 +200,12 @@ li.product:last-child {
 /* Nav bar - Facebook styles*/
 li.fb div.dropdown {
     position: absolute;
-    right: 0;
+    right: -2px;
     padding: 0;
     height: 535px;
-}
-
-li.menu-item.fb .dropdown {
-    border-right: 2px solid #16249B;
-    border-left: none;
-    /*overflow: hidden;*/
+    border-color: #84adff;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
 }
 
 #fbfeed {

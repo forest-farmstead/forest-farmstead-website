@@ -11,20 +11,24 @@ html
                 img(src='/images/farm_logo_large.png')
         nav
             ul
-                li.menu-item.about
-                    block menuTitle
-                        .name About
-                    .dropdown
-                        block content
-                            span Hi lol
-                li.menu-item
-                    include ./menu_products.jade
-                li.menu-item
-                    include ./menu_carbon.jade
-                li.menu-item.fb
-                    include ./menu_facebook.jade
-                li.menu-item.wwoof
-                    include ./menu_wwoof.jade
+                block nav
+                    block nav-about
+                        li.menu-item.about
+                            a(href="/about"): .name About
+                    block nav-products
+                        li.menu-item.products
+                            a(href="/products"): .name Products
+                    block nav-carbon
+                        li.menu-item.carbon
+                            a(href="/carbon"): .name Carbon
+                    block nav-fb
+                        li.menu-item.fb
+                            include ./menu_facebook.jade
+                    block nav-wwoof
+                        li.menu-item.wwoof
+                            include ./menu_wwoof.jade
+        article
+            block content
         //- main.js included by default.  main.js is the output
         //- of browserify's compilation of main.js from the root
         //- directory

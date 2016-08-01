@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from './components/Gallery';
 
-const HOMEGALLERY_IMAGE_DIR = './images/gallery/';
+const HOMEGALLERY_IMAGE_DIR = '/images/gallery/';
 
 const HOMEGALLERY_IMAGE_SET = [
   {

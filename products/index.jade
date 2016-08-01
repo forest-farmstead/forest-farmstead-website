@@ -11,35 +11,36 @@ mixin product(name, desc, image, url)
                 span= desc
 
 block title
-    title Forest Farmstead - Carbon Footprint Management
+    title Forest Farmstead – Products
 
-prepend nav-carbon
+prepend nav-products
     +highlight
 
 block content
-    p We use several strategies to manage our carbon footprint
+    p We make a number of organic products that you want to buy from us.
     ul.products.pure-g
         +product(
-            'Forest Preservation',
+            'Woodcutter\'s Bitters',
             'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_forest_logo.jpg',
-            '/carbon/index.html'
+            '/images/product_bitters_logo.png',
+            '/products/woodcutters.html'
         )
         +product(
-            'Responsible forest management',
+            'Organic Umeboshi',
             'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_forest_management_logo.png',
-            '/carbon/index.html'
+            '/images/product_umeboshi_logo.png',
+            '/products/umeboshi.html'
         )
         +product(
-            'Biocharcoal',
+            'Organic Umeboshi Vinegar',
             'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_charcoal_logo.png',
-            '/carbon/index.html'
+            '/images/product_umeboshi_vinegar_logo.png',
+            '/products/umeboshi.html'
         )
         +product(
-            'Renewable Energy',
+            'Charcoal',
             'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_renewable_logo.png',
-            '/carbon/index.html'
+            '/images/product_charcoal_logo.png',
+            '/products/charcoal.html'
         )
+

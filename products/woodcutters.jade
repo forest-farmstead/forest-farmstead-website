@@ -1,11 +1,12 @@
-extends ../includes/layout.jade
+include ../includes/mixins_menu.jade
 include ../includes/mixins_products.jade
+extends ../includes/layout.jade
 
 block title
     title Forest Farmstead - Woodcutter's Bitters
 
-block menuTitle
-    .name Woodcutter's
+prepend nav-products
+    +highlight
 
 block content
     +product
