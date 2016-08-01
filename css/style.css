@@ -14,24 +14,15 @@ article {
     margin: 0 0 0 calc(220px + 6em);
     padding: 1em;
     width: 566px;
-    background-color: rgba(251, 251, 251, 0.60);
+    background-color: rgba(251, 251, 251, 0.80);
     font-family: 'PT Serif', serif;
     font-size: 0.83em;
     color: rgb(105, 105, 105);
 }
 
-article > ul {
-    list-style-type: none;
+article:empty {
+    display: none;
 }
-
-footer {
-    padding: 1em 5em 1em 5em;
-    background-color: rgba(200, 200, 200, 0.9);
-}
-
-    footer span {
-        font-family: 'PT Serif', serif;
-    }
 
 /* Nav bar styles */
 
@@ -124,6 +115,17 @@ nav {
                 border-right: 2px solid #84adff;
             }
 
+            /* Facebook dropdown */
+            li.fb div.dropdown {
+                position: absolute;
+                right: -2px;
+                padding: 0;
+                height: 535px;
+                border-color: #84adff;
+                border-style: solid;
+                border-width: 0 2px 2px 2px;
+            }
+
             /* WWOOF site menu item styles */
 
             li.menu-item.wwoof:hover .name {
@@ -136,7 +138,7 @@ nav {
                 text-decoration: none;
             }
 
-/* Nav bar - about tab styles */
+/* About page */
 
 p.about label[for=map-toggle] {
     text-decoration: underline;
@@ -153,11 +155,20 @@ p.about input:checked ~ iframe#map {
     display: block;
 }
 
-/* Nav bar - product styles */
+div#homegallery {
+    margin: 1.5em auto 1.5em auto;
+}
+
+figcaption {
+    font-family: 'PT Serif', serif;
+}
+
+/* Product styles */
 ul.products {
     width: 30em;
     padding: 0;
     margin-top: 1em;
+    list-style-type: none;
 }
 
 li.product {
@@ -193,32 +204,6 @@ li.product:last-child {
         font-family: 'PT Serif', serif;
     }
 
-/* Nav bar - Facebook styles*/
-li.fb div.dropdown {
-    position: absolute;
-    right: -2px;
-    padding: 0;
-    height: 535px;
-    border-color: #84adff;
-    border-style: solid;
-    border-width: 0 2px 2px 2px;
-}
-
-#fbfeed {
-    /*margin-top: -70px;*/
-    /*overflow: scroll;*/
-}
-
-/* Article styles */
-div#homegallery {
-    margin: 1.5em auto 1.5em auto;
-}
-
-    figcaption {
-        font-family: 'PT Serif', serif;
-    }
-
-/* Product page styles */
 .seal {
     display: inline-block;
     margin-right: 0.5em;
@@ -239,4 +224,42 @@ div#homegallery {
 
 .product-image img {
     width: 100%;
+}
+
+/* WWOOF page */
+article div.wwoof {
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+}
+
+.blob {
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    border-top: 2px solid #dedede;
+}
+
+.testimonial {
+    font-size: 1em;
+}
+
+.testimonial-body {
+    margin-bottom: 1em;
+}
+
+.testimonial p {
+    margin: 0;
+    padding: 0;
+}
+
+.wwoof-sidebar {
+    font-weight: 700;
+    text-align: center;
+}
+
+.wwoof-sidebar a {
+    color: inherit;
+    text-decoration: none;
 }
