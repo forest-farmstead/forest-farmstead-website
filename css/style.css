@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 
+h1 {
+    font-weight: 700;
+    color: black;
+}
+
 div.bg {
     position: fixed;
     top: -1em;
@@ -164,6 +169,12 @@ figcaption {
 }
 
 /* Product styles */
+div.carbon {
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
+}
+
 ul.products {
     width: 30em;
     padding: 0;
@@ -177,7 +188,7 @@ li.product {
     padding-top: 1em;
     background-color: white;
     border-top: 2px solid #dedede;
-    margin-bottom: 1em;
+    margin: 1em;
     color: black;
 }
 
