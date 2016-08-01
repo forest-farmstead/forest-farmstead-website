@@ -4,7 +4,7 @@
 #   outputs in filename.jpg.thumb format
 # Resizes those files to 300px x 300px and saves to same filenames
 
-rm *.thumb
+rm -f *.thumb
 
 convert *.jpg \
     -set option:distort:viewport \

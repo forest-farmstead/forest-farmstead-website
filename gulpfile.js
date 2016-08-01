@@ -6,6 +6,7 @@ var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
+var shell = require('gulp-shell')
 
 var browserify = require('browserify');
 var reactify = require('reactify');
@@ -49,6 +50,19 @@ gulp.task('css', function() {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('thumbnails', shell.task([
+  'cd images/gallery && ./thumbnail_generate.sh'
+]));
+
+gulp.task('gallery-resize', shell.task([
+  'cd images/gallery && ./image_resize.sh'
+]));
+
+gulp.task('images-deploy', ['thumbnails', 'gallery-resize'], function() {
+  gulp.src('images/**/**.*')
+    .pipe(gulp.dest('build/images'));
+});
+
 gulp.task('images', function() {
   gulp.src('images/**/**.*')
     .pipe(gulp.dest('build/images'));
@@ -56,4 +70,4 @@ gulp.task('images', function() {
 
 gulp.task('default', ['templates', 'javascript', 'css', 'images']);
 
-gulp.task('build', ['templates', 'javascript', 'css', 'images']);
+gulp.task('build', ['templates', 'javascript', 'css', 'images-deploy']);
