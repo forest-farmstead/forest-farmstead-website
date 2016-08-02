@@ -4,13 +4,18 @@ extends ../includes/layout.jade
 block title
     title Forest Farmstead – About
 
+block background
+    +background('dusk.jpg')
+
 prepend nav-about
     +highlight
 
 block content
-    p.about
-        //- The checkbox, which displays as 'Rockport, Washington',
-        //- controls the visibility of the iframe through css
+    .about
+        p The Forest Farmstead is tucked in the North Cascades mountains temperate rain forest. We raise animals, have an orchard and garden, and sustainably manage our forest land. We are looking to build our family homestead’s productivity, diversity, and ability to host others.
+
+        p Terrance is a renewable energy engineer and Erin is trained in resource conservation. Both have a background in agriculture. We have two children Alden 13 and Matilda 7.
+
         span We are a modern, sustainable homestead done the old fashioned way.  We are located in scenic&nbsp;
         input(type='checkbox', id='map-toggle', style={display: 'none'})
         label(for='map-toggle')
@@ -24,7 +29,7 @@ block content
             style={border: 0}
             frameborder='0'
         )
-    address 55753 State Route 20/PO Box 205<br/>Rockport, WA<br/>(360) 399-3408
+    p: address 55753 State Route 20/PO Box 205<br/>Rockport, WA<br/>(360) 399-3408
 
     //- This div is managed by React in home_gallery.js
     div#homegallery

@@ -92,9 +92,10 @@ nav {
                 display: none;
                 position: absolute;
                 padding: 1em;
-                background-color: rgba(251, 251, 251, 0.60);
+                background-color: rgba(251, 251, 251, 0.90);
                 color: rgb(105, 105, 105);
                 border-left: 2px solid black;
+                font-size: 0.83em;
             }
 
             li.menu-item:hover .dropdown {
@@ -113,12 +114,12 @@ nav {
             }
 
             li.menu-item.fb:hover .name {
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid #84adff;
             }
 
-            li.menu-item.fb:hover {
+/*            li.menu-item.fb:hover {
                 border-right: 2px solid #84adff;
-            }
+            }*/
 
             /* Facebook dropdown */
             li.fb div.dropdown {
@@ -133,6 +134,10 @@ nav {
 
             /* WWOOF site menu item styles */
 
+            li.menu-item.wwoof {
+                position: relative;
+            }
+
             li.menu-item.wwoof:hover .name {
                 border-bottom: 2px solid green;
                 /*border-right: 2px solid green;*/
@@ -143,20 +148,25 @@ nav {
                 text-decoration: none;
             }
 
+            li.wwoof div.dropdown {
+                position: absolute;
+                right: 0;
+            }
+
 /* About page */
 
-p.about label[for=map-toggle] {
+div.about label[for=map-toggle] {
     text-decoration: underline;
     cursor: pointer;
     color: blue;
 }
 
-p.about iframe#map {
+div.about iframe#map {
     display: none;
     margin-top: 1em;
 }
 
-p.about input:checked ~ iframe#map {
+div.about input:checked ~ iframe#map {
     display: block;
 }
 
@@ -183,21 +193,18 @@ ul.products {
 }
 
 li.product {
-    height: 7em;
+    min-height: 7em;
     width: 100%;
     padding-top: 1em;
     background-color: white;
     border-top: 2px solid #dedede;
-    margin: 1em;
+    margin: 0 0 1em 0;
     color: black;
 }
 
-li.product:last-child {
-    padding-bottom: 1em;
-}
-
     li.product p {
-        margin: 0;
+        margin: 0 1em 0.5em 0;
+        font-family: 'PT Serif', serif;
     }
 
     li.product img {
@@ -206,21 +213,12 @@ li.product:last-child {
         width: 70%;
     }
 
-    li.product p {
-        font-family: 'PT Serif', serif;
-        font-weight: 700;
-    }
-
-    li.product span {
-        font-family: 'PT Serif', serif;
-    }
-
 .seal {
     display: inline-block;
     margin-right: 0.5em;
 }
 
-.pure-g.product {
+.pure-g.product-detail {
     background-color: white;
 }
 

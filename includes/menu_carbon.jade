@@ -4,33 +4,34 @@ mixin product(name, desc, image, url)
             div.pure-u-1-3
                 img(src=image)
             div.pure-u-2-3
-                p= name
-                span= desc
-.name: a(href="/carbon/index.html") Carbon
+                p: strong= name
+                p= desc
+
+.name: a(href="/carbon") Carbon
 .dropdown
     p We use several strategies to manage our carbon footprint
     ul.products.pure-g
         +product(
             'Forest Preservation',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'Putting about half our forest land into a permanent conservation easement has locked up 1250 metric tons of carbon dioxide',
             '/images/carbon_forest_logo.jpg',
-            '/carbon/index.html'
+            '/carbon'
         )
         +product(
             'Responsible forest management',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'By managing our forest for wildlife, aesthetics, and production the carbon in our managed forest increases by 9.5 Metric Tons per year.',
             '/images/carbon_forest_management_logo.png',
-            '/carbon/index.html'
+            '/carbon'
         )
         +product(
             'Biocharcoal',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'The dust and small bits which are waste from our charcoal production end up as carbon sequestered in our soil about two pounds of carbon dioxide per pound of charcoal sold.',
             '/images/carbon_charcoal_logo.png',
-            '/carbon/index.html'
+            '/carbon'
         )
         +product(
             'Renewable Energy',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'What we don\'t use on the farm from our small hydroelectric plant we put onto the grid for our neighbors to use keeping the utility from emitting 45 metric tons per year of carbon dioxide.',
             '/images/carbon_renewable_logo.png',
-            '/carbon/index.html'
+            '/carbon'
         )

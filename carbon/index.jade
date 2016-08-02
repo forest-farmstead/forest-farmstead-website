@@ -7,11 +7,20 @@ mixin product(name, desc, image, url)
             div.pure-u-1-3
                 img(src=image)
             div.pure-u-2-3
-                p= name
+                p: strong= name
                 span= desc
+
+mixin header(text, img)
+    h2
+        img(src=img height='25px' width='25px')
+        span(style={'vertical-align': 'top'}) &nbsp;#{text}
+
 
 block title
     title Forest Farmstead - Carbon Footprint Management
+
+block background
+    +background('forest_light.jpg')
 
 prepend nav-carbon
     +highlight
@@ -20,40 +29,22 @@ block content
     .carbon
         h1 Carbon Mitigation
 
+        +header('Forest Preservation', '/images/carbon_forest_logo.jpg')
+
         p Our 19 acre forest is split into two parts.  The ten acres that are uncut forest have been placed in a conservation easment and will never be harvested for timber.  9 acres is in advanced second growth and in need of active management.
 
         p The ten acres of preserved forest have captured permanently approximately 1250 metric tons of Carbon Dioxide.
 
+        +header('Responsible Forest Management', '/images/carbon_forest_management_logo.png')
+
         p The nine acres of managed forest is being managed to increase timber stocks over time and to transition to having old growth features.  This sort of management increased captured carbon in the wood, the roots and the soil  The EPA estimates 1.06 metric tons per acre of growing forest (national average) our pacific northwest forest grows much more rapidly than the US average but we also do remove some wood as we manage the forest so using this average number seems fare.  so for our 9 acres we sequester about 9.5 Metric Tons of Carbon Dioxide per year.
 
+        +header('Renewable Energy', '/images/carbon_renewable_logo.png')
+
         p Currently our farm runs off-grid on our own small hydroelectric system.  This greatly reduces our farm's carbon emissions footprint.  By the end of the year we will have that hydro plant connected to the grid producing 100,000 kilowatt hours per year for others locally to use.  This will offset 45 metric tons of carbon a year by reducing our neighborhoods dependence on the local utility who's electricity is about 1/3 coal and 1/3 natural gas.
+
+        +header('Biocharcoal', '/images/carbon_charcoal_logo.png')
 
         p When you buy our charcoal for grilling you are using a natural fossil fuel free heat source which has its own positive carbon impact.   But what you might not know is that about one third of the charcoal we produce ends up in too small of chunks (and dust) that would not be right to sell as charcoal.  This 'Bio-char' we use as a soil amendment which helps keep nutrients from being leached out of the soil, traps heavy metals and other environmental contaminants, and it helps to increase soil drainage while also improving moisture retention.  It is also pure carbon that won't be leaving the soil for hundreds of years.  Each pond of bio-char we add to the soil equates tot he removal of 3.7 pounds of carbon dioxide from the air.
 
         p Our carbon claims are sourced from the EPA's #[a(target='_blank' href='https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator') greenhouse gas equivalencies calculator #[i.fa.fa-external-link]]
-
-    ul.products.pure-g
-        +product(
-            'Forest Preservation',
-            'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_forest_logo.jpg',
-            '/carbon/index.html'
-        )
-        +product(
-            'Responsible forest management',
-            'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_forest_management_logo.png',
-            '/carbon/index.html'
-        )
-        +product(
-            'Biocharcoal',
-            'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_charcoal_logo.png',
-            '/carbon/index.html'
-        )
-        +product(
-            'Renewable Energy',
-            'Product description.  You can buy this for $29.95 at Costco',
-            '/images/carbon_renewable_logo.png',
-            '/carbon/index.html'
-        )

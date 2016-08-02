@@ -7,8 +7,8 @@ mixin product(name, desc, image, url)
             div.pure-u-1-3
                 img(src=image)
             div.pure-u-2-3
-                p= name
-                span= desc
+                p: strong= name
+                p= desc
 
 block title
     title Forest Farmstead – Products
@@ -21,25 +21,19 @@ block content
     ul.products.pure-g
         +product(
             'Woodcutter\'s Bitters',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'A unique flavor from the forest.  Organic Douglas Fir bitters adds brightness and depth to your cocktail, soda, or tea.  $15 100mL bottle',
             '/images/product_bitters_logo.png',
             '/products/woodcutters.html'
         )
         +product(
-            'Organic Umeboshi',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'Organic Umeboshi/Umezu',
+            'Our organic feral plums are fermented with salt to produce the incredible concentrated savory flavor of Umeboshi and Umeboshi Vinegar (Umezu).  6oz Umeboshi jar $15, 5oz Umezu bottle $10.',
             '/images/product_umeboshi_logo.png',
             '/products/umeboshi.html'
         )
         +product(
-            'Organic Umeboshi Vinegar',
-            'Product description.  You can buy this for $29.95 at Costco',
-            '/images/product_umeboshi_vinegar_logo.png',
-            '/products/umeboshi.html'
-        )
-        +product(
             'Charcoal',
-            'Product description.  You can buy this for $29.95 at Costco',
+            'Wood from our organic forest (Washington\'s First) is hand crafted into charcoal with the Northwest flavors you love. 2.5 lb bag $7',
             '/images/product_charcoal_logo.png',
             '/products/charcoal.html'
         )
