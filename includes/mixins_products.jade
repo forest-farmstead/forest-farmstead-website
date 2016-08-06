@@ -6,11 +6,11 @@ mixin sidebar(photo, price, size, availability)
     .product-sidebar.pure-u-2-5
         .product-image: img(src=photo)
         .product-info
+            p
+                block
             span.price $#{price} /&nbsp;
             span.size= size
             p= availability
-            p
-                block
 
 mixin description
     .pure-u-3-5
