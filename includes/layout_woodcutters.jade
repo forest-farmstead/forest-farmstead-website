@@ -6,7 +6,7 @@ html
         include ./head.jade
         //- Default title is 'Forest Farmstead'
         block title
-            title Forest Farmstead
+            title Woodcutters Bitters
     body
         //- The default background can be replaced by using the
         //- +background(image_name) mixin.  Backgrounds must be
@@ -25,23 +25,15 @@ html
                     //- Any of the nav-* blocks can be prepended
                     //- with the +highlight() mixin.  This creates
                     //- an underline beneath the menu bar.
-                    block nav-about
-                        li.menu-item.about
-                            a(href="/about"): .name About
-                    block nav-products
-                        li.menu-item.products
-                            a(href="/products"): .name Products
-                            include ./menu_products.jade
-                    block nav-carbon
-                        li.menu-item.carbon
-                            a(href="/carbon"): .name Carbon
-                            include ./menu_carbon.jade
+                    block nav-ff
+                        li.menu-item.ff
+                            a(href="/"): .name Forest Farmstead
+                    block nav-woodcutters
+                        li.menu-item.woodcutters
+                            a(href="/woodcutters"): .name Woodcutter's Bitters
                     block nav-fb
                         li.menu-item.fb
-                            include ./menu_facebook.jade
-                    block nav-wwoof
-                        li.menu-item.wwoof
-                            include ./menu_wwoof.jade
+                            a(target='_blank' href='https://www.facebook.com/Woodbitters'): .name Facebook
         article
             block content
 
