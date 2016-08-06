@@ -1,5 +1,29 @@
+mixin product(name, desc, image, url)
+    a(href=url)
+        li.product
+            div.pure-u-1-3
+                img(src=image)
+            div.pure-u-2-3
+                p: strong= name
+                p= desc
 
-
-.name: a(href="/products/index.html") Products
 .dropdown
-
+    ul.products.pure-g
+        +product(
+            'Woodcutter\'s Bitters',
+            'A unique flavor from the forest.  Organic Douglas Fir bitters adds brightness and depth to your cocktail, soda, or tea.  $15 100mL bottle',
+            '/images/product_bitters_logo.png',
+            '/products/woodcutters.html'
+        )
+        +product(
+            'Organic Umeboshi/Umezu',
+            'Our organic feral plums are fermented with salt to produce the incredible concentrated savory flavor of Umeboshi and Umeboshi Vinegar (Umezu).  6oz Umeboshi jar $15, 5oz Umezu bottle $10.',
+            '/images/product_umeboshi_logo.png',
+            '/products/umeboshi.html'
+        )
+        +product(
+            'Charcoal',
+            'Wood from our organic forest (Washington\'s First) is hand crafted into charcoal with the Northwest flavors you love. 2.5 lb bag $7',
+            '/images/product_charcoal_logo.png',
+            '/products/charcoal.html'
+        )

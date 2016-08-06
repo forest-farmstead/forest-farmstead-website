@@ -6,7 +6,7 @@ const HOMEGALLERY_IMAGE_DIR = '/images/gallery/';
 const HOMEGALLERY_IMAGE_SET = [
   {
     name: 'chicks.jpg',
-    caption: 'Chicks.....hatching.....'
+    caption: 'Newborns in the brooder box.'
   },
   {
     name: 'fog.jpg',
