@@ -35,7 +35,7 @@ gulp.task('javascript', function () {
 
 
 gulp.task('templates', function() {
-  var templates = ['./**/*.jade', '!./includes/*.jade'];
+  var templates = ['./**/*.jade', '!./includes/*.jade', '!./resources/**/**.*'];
   var LOCALS = {};
 
   gulp.src(templates)
@@ -68,6 +68,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/images'));
 });
 
-gulp.task('default', ['templates', 'javascript', 'css', 'images']);
+gulp.task('resources', function() {
+  gulp.src('resources/**/**.*')
+    .pipe(gulp.dest('build/resources'));
+});
 
-gulp.task('build', ['templates', 'javascript', 'css', 'images-deploy']);
+gulp.task('default', ['templates', 'javascript', 'css', 'images', 'resources']);
+
+gulp.task('build', ['templates', 'javascript', 'css', 'images-deploy', 'resources']);

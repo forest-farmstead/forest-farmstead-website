@@ -1,11 +1,14 @@
 include ./includes/mixins_global.jade
 extends ./includes/layout.jade
 
+block background
+    +background('fields.jpg')
+
 block content
     iframe#fbfeed(
-        src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fforestfarmstead%2F&tabs=timeline&width=566&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=161109063979941'
+        src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fforestfarmstead%2F&tabs=timeline&width=566&height=450&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=161109063979941'
         width='566'
-        height='700'
+        height='450'
         style='border:none;overflow:hidden'
         scrolling='yes'
         frameborder='0'

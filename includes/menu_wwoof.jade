@@ -1,5 +1,5 @@
 mixin product(name, desc, image, url)
-    a(href=url)
+    a(target!=attributes.target, href=url)
         li.product
             div.pure-u-1-3
                 img(src=image)
@@ -24,4 +24,4 @@ a(href='/wwoof')
             'Occasionally we are able to accomodate guests in our yurt and/or treehouse',
             '/images/airbnb_logo.png',
             'https://www.airbnb.com/rooms/12622556'
-        )
+        )(target='_blank')
