@@ -1,6 +1,11 @@
+//- This inserts a .highlight div right before a list item in the
+//- menu bar.  The stylesheet is written to then create an underline
+//- beneath the next in the list item.
 mixin highlight
     .highlight(style={display: 'none'})
 
+//- Page backgrounds are rendered in a .bg div, instead of on the
+//- body tag.
 mixin background(image_name)
     if image_name
         .bg(style={'background-image': 'url(\'/images/backgrounds/#{image_name}\')'})

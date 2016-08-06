@@ -6,14 +6,23 @@ html
         block title
             title Forest Farmstead
     body
+        //- The default background can be replaced by using the
+        //- +background(image_name) mixin.  Backgrounds must be
+        //- placed in the background/ folder
         block background
             +background
+
+        //- This is the Forest Farmstead logo
         .logo
             a(href='/')
                 img(src='/images/farm_logo_large.png')
+
         nav
             ul
                 block nav
+                    //- Any of the nav-* blocks can be prepended
+                    //- with the +highlight() mixin.  This creates
+                    //- an underline beneath the menu bar.
                     block nav-about
                         li.menu-item.about
                             a(href="/about"): .name About
@@ -23,7 +32,6 @@ html
                     block nav-carbon
                         li.menu-item.carbon
                             include ./menu_carbon.jade
-                            //- a(href="/carbon"): .name Carbon
                     block nav-fb
                         li.menu-item.fb
                             include ./menu_facebook.jade
@@ -32,19 +40,9 @@ html
                             include ./menu_wwoof.jade
         article
             block content
+
         //- main.js included by default.  main.js is the output
         //- of browserify's compilation of main.js from the root
         //- directory
         block scripts
             script(src='/main.js')
-            script(src='/analytics.js')
-            //- <script>
-            //-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            //-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            //-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            //-     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            //-     ga('create', 'UA-82053486-1', 'auto');
-            //-     ga('send', 'pageview');
-
-            //- </script>
