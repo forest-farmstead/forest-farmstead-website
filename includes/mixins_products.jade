@@ -2,7 +2,7 @@ mixin product-detail
     .pure-g.product-detail
         block
 
-mixin sidebar(photo, price, size, availability)
+mixin sidebar(photo, price, size, availability, ...link)
     .product-sidebar.pure-u-2-5
         .product-image: img(src=photo)
         .product-info
@@ -10,7 +10,11 @@ mixin sidebar(photo, price, size, availability)
                 block
             span.price $#{price} /&nbsp;
             span.size= size
-            p= availability
+            if link
+              p
+                a(href=link[0])= availability
+            else
+              p= availability
 
 mixin description
     .pure-u-3-5

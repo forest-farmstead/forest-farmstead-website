@@ -272,3 +272,9 @@ article div.wwoof {
     color: inherit;
     text-decoration: none;
 }
+
+/* Recipe page */
+p.nospace {
+    margin-top: 0;
+    margin-bottom: 0;
+}

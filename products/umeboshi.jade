@@ -4,7 +4,7 @@ extends ../includes/layout.jade
 
 block title
     title Forest Farmstead - Umeboshi
-    
+
 block background
     +background('Ume Drying.jpg')
 
@@ -21,15 +21,18 @@ block content
         +sidebar('/images/products/umeboshi.jpg',
             '15',
             '6oz jar',
-            'Available direct from farm')
+            'Available direct from farm',
+            'http://store.forestfarmstead.com')
         +description
             h1 Umezu
             p| Our Umezu or umeboshi vinegar is the bright brine that is developed as our organic feral plums ferment in sea salt.   This salty-sour condiment is traditionally used to season sushi rice and other Japanese dishes.  In our American kitchen we use it in that way but also for salad dressings, marinades and on popcorn.
             +sealOrganic
             +sealGF
+            p Check out some #[a(href='/recipes') recipes]!
         +sidebar('/images/products/umezu.jpeg',
             '10',
             '5oz bottle',
-            'Available direct from farm')
+            'Available direct from farm',
+            'http://store.forestfarmstead.com')
 
 

@@ -1,0 +1,57 @@
+include ../includes/mixins_global.jade
+extends ../includes/layout.jade
+
+mixin header(text)
+    h2
+        span(style={'vertical-align': 'top', 'margin-left': '-5px'}) &nbsp;#{text}
+
+
+block title
+    title Forest Farmstead - Recipes
+
+block background
+    +background('forest_light.jpg')
+
+prepend nav-carbon
+    +highlight
+
+block content
+    .carbon
+        h1 Recipes
+
+        +header('Bubbles and Bitters')
+        p Sparkling water and 4 dashes <a href='/products/woodcutters.html'> Woodcutter's Bitters</a>.  Bitters on top for a cool cloud effect, bitters before the soda for through mixing.
+
+        +header('Doug Fir Tea')
+        p Make a strong cup of black tea add a couple dashes of <a href='/products/woodcutters.html'> Woodcutter's Bitters</a> and a spot of milk if you like.  Feeling like a little extra? A half oz of Irish whisky won't do no harm.
+
+        +header('Blackberry Dust')
+        p 1 oz Forest Farmstead Blackberry Serum, 6 oz sparkling water, top with 2 dashes of <a href='/products/woodcutters.html'> Woodcutter's Bitters</a>.
+        p Refreshing non-alcholic beverage with the woods and berries from the Northwest woods.
+        p Substitute a half can of natural fruit flavored soda for the Serum and sparkling water and you can make a Pomegranate dust, Cherry Dust, whatever.
+
+        +header('Woodcutter\'s Birthday')
+        p Invented by McMinnville Oregon bartender Patrick Bruce at the Thistle restaurant for a Woodcutter's  birthday.
+        p.nospace 1.5 oz gin
+        p.nospace .75 oz Zirbenz
+        p.nospace .75 oz Lime
+        p.nospace .5 oz simple syrup
+        p.nospace 4 dashes <a href='/products/woodcutters.html'> Woodcutter's Bitters</a>
+        p Shaken with Ice served in a low-ball or Martini glass.
+
+        +header('Plumalingus')
+        p A pink, salty and sour dirty martini
+        p.nospace 2 oz London Dry Gin
+        p.nospace .5 oz Japanese Plum Wine
+        p.nospace .25 oz <a href='/products/umeboshi.html'>Forest Farmstead Umezu</a>
+        p.nospace 2 <a href='/products/umeboshi.html'>Forest Farmstead Umeboshe Plums</a>
+        p.nospace 3 Dashes <a href='/products/woodcutters.html'> Woodcutter's Bitters</a>
+        p Shake the first three ingredients with ice pour over Umeboshi Plums in a martini glass, Bitters on top.
+
+        +header('Seattle Whisky')
+        p This drink looks like a dark rainy day and yet is the cure for one.
+        p.nospace In a low-ball glass place one large ice cube
+        p.nospace Pour over 2 oz sparkling water
+        p.nospace Add 2-4 dashes <a href='/products/woodcutters.html'> Woodcutter's Bitters</a>
+        p Carefully pour 2oz of your favorite whisky on to the ice cube so that it forms a dark layer over the cloudy rainstorm below.
+
