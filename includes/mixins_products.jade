@@ -12,7 +12,7 @@ mixin sidebar(photo, price, size, availability, ...link)
             span.size= size
             if link
               p
-                a(href=link[0])= availability
+                a(href=link[0] target="_blank")= availability
             else
               p= availability
 
