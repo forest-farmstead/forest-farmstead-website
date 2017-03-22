@@ -6,12 +6,12 @@ var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
-var shell = require('gulp-shell')
+var shell = require('gulp-shell');
 
 var browserify = require('browserify');
 var reactify = require('reactify');
 var babelify = require('babelify');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 
 gulp.task('javascript', function () {
   // set up the browserify instance on a task basis
@@ -39,7 +39,7 @@ gulp.task('templates', function() {
   var LOCALS = {};
 
   gulp.src(templates)
-    .pipe(jade({
+    .pipe(pug({
       locals: LOCALS
     }))
     .pipe(gulp.dest('./build/'));
