@@ -7,11 +7,13 @@ var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var shell = require('gulp-shell')
+var child = require('child_process');
 
 var browserify = require('browserify');
 var reactify = require('reactify');
 var babelify = require('babelify');
 var jade = require('gulp-jade');
+var jekyll = require('gulp-jekyll');
 
 gulp.task('javascript', function () {
   // set up the browserify instance on a task basis
@@ -35,7 +37,11 @@ gulp.task('javascript', function () {
 
 
 gulp.task('templates', function() {
-  var templates = ['./**/*.jade', '!./includes/*.jade', '!./resources/**/**.*'];
+  var templates = ['./**/*.jade',
+                   '!./build/**/**.*',
+                   '!./includes/*.jade',
+                   '!./resources/**/**.*',
+                   '!./blog/**/**.*'];
   var LOCALS = {};
 
   gulp.src(templates)
@@ -43,6 +49,17 @@ gulp.task('templates', function() {
       locals: LOCALS
     }))
     .pipe(gulp.dest('./build/'));
+});
+
+gulp.task('templates-blog', function() {
+  var templates = ['./blog/layouts/**/*.jade']
+  var LOCALS = {};
+
+  gulp.src(templates)
+    .pipe(jade({
+      locals: LOCALS
+    }))
+    .pipe(gulp.dest('./blog/_layouts/'));
 });
 
 gulp.task('css', function() {
@@ -73,6 +90,18 @@ gulp.task('resources', function() {
     .pipe(gulp.dest('build/resources'));
 });
 
-gulp.task('default', ['templates', 'javascript', 'css', 'images', 'resources']);
+gulp.task('jekyll', ['templates-blog'], function() {
+  var jekyll = child.spawn('jekyll', ['build']);
+  var jekyllLogger = function(buf) {
+    buf.toString()
+      .split(/\n/)
+      .forEach(function(msg) {gutil.log('Jekyll: ' + msg);});
+  };
 
-gulp.task('build', ['templates', 'javascript', 'css', 'images-deploy', 'resources']);
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('default', ['jekyll', 'templates', 'javascript', 'css', 'images', 'resources']);
+
+gulp.task('build', ['jekyll', 'templates', 'javascript', 'css', 'images-deploy', 'resources']);

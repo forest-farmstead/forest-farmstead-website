@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+---
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class="carbon">
+    <h1><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h1>
+    <p class="author">
+      <span class="date">{{ post.date | date: "%A, %B %e, %Y" }}</span>
+    </p>
+    <p class="content">
+      {{ post.content }}
+    </p>
+    <p class="author">– {{ post.author }}</p>
+  </div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination" style="margin-left:1em">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend:site.baseurl }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend:site.baseurl }}" class="next">Next</a>
+  {% else %}
+    <span class="next" style="margin:1em;">Next</span>
+  {% endif %}
+</div>

@@ -2,3 +2,4 @@ node_modules/
 build/
 images/gallery/*.thumb
 graphics/
+blog/_layouts/

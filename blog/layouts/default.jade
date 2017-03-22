@@ -1,0 +1,14 @@
+include ../../includes/mixins_global.jade
+extends ../../includes/layout.jade
+
+block title
+    title {{ page.title }} – Forest Farmstead
+
+block background
+    +background('dusk.jpg')
+
+prepend nav-blog
+    +highlight
+
+block content
+    p {{ content }}
