@@ -1,0 +1,36 @@
+include ../includes/mixins_global.jade
+include ../includes/mixins_products.jade
+extends ../includes/layout.jade
+
+block title
+    title Forest Farmstead - Product Name
+
+block background
+    //- Background image must be located in the images/backgrounds/ folder.
+    //- To use the default background image, delete lines 8-11.
+    +background('product.jpg')
+
+prepend nav-products
+    +highlight
+
+block content
+    +product-detail
+        +description
+            h1 Product Name
+            p| Example product description. This can be as long as you want. To have multiple paragraphs, create another one like so:
+            p| This is the second paragraph.
+
+            //- For organic and gluten-free products, keep these next two lines. Otherwise, delete them or
+            //- comment them out (The sequence '//- ' at the beginning of a line comments out that line)
+            +sealOrganic
+            +sealGF
+
+        //- The sidebar contains an image of the product, a price, and a quantity.
+        //- In this example, the product costs $15 for a 6oz jar, and the text
+        //- 'Available direct from farm' links to the online store
+        +sidebar('/images/products/umeboshi.jpg',
+            '15',
+            '6oz jar',
+            'Available direct from farm',
+            'http://store.forestfarmstead.com')
+

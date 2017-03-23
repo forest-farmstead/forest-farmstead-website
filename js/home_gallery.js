@@ -33,8 +33,8 @@ const HOMEGALLERY_IMAGE_SET = [
     caption: 'Just another sunny day in the upper Skagit Valley.'
   }
   // ,{
-  //   name: 'river.jpg',
-  //   caption: 'The nearby Skagit River, an invaluable refuge from warm summer days'
+  //   name: 'picturename.jpg',
+  //   caption: 'Caption for pictures'
   // }
 ].map((img) => ({...img, src: HOMEGALLERY_IMAGE_DIR + img.name, thumbnail: HOMEGALLERY_IMAGE_DIR + img.name + '.thumb'}));
 
