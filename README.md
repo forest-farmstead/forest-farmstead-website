@@ -3,7 +3,7 @@
 2. Open `js/home_gallery.js` and modify the `HOMEGALLERY_IMAGE_SET` array. Add the following code to the end of the array (right before `].map`):
 
 ```
-{
+,{
     name: 'picturename.jpg',
     caption: 'Caption for picture'
 }
