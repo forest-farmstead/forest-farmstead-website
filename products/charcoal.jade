@@ -1,29 +1,29 @@
-//- include ../includes/mixins_global.jade
-//- include ../includes/mixins_products.jade
-//- extends ../includes/layout.jade
+include ../includes/mixins_global.jade
+include ../includes/mixins_products.jade
+extends ../includes/layout.jade
 
-//- block title
-//-     title Forest Farmstead - Charcoal
+block title
+    title Forest Farmstead - Charcoal
 
-//- prepend nav-products
-//-     +highlight
+prepend nav-products
+    +highlight
 
-//- block background
-//-     +background('charcoal.jpg')
+block background
+    +background('charcoal.jpg')
 
-//- block content
-//-     +product-detail
-//-         +description
-//-             h1 Local Organic Charcoal Charcoal
-//-             p| At Forest Farmstead we use our own hardwoods from Washington's first certified organic forest.  This easy lighting charcoal supports your family forest neighbors in sustainable managing their land while bringing you the flavors of the Northwest.
-//-             p| Forest Farmstead Organic Charcoal is made with a non-polluting 'retort' process that keeps some of the smoke (i.e. flavor) in the wood, and makes it easy to light.  The bits that are too small for charcoal we till into our farm soil as 'biochar,' which means your support of our charcoal production is also sequestering carbon, a small step in addressing climate change, on top of the really short commute the charcoal takes from forest to grill.
-//-             +sealOrganic
-//-         +sidebar('/images/products/FF Charcoal Seal.png',
-//-             '8',
-//-             '2.5lbs bag',
-//-             'Available direct from farm',
-//-             'http://store.forestfarmstead.com')
-//-             strong Flavors Currently Available
-//-             p Big Leaf Maple
-//-             p Red Alder
-//-             p Feral Plum
+block content
+    +product-detail
+        +description
+            h1 Local Organic Charcoal Charcoal
+            p| At Forest Farmstead we use our own hardwoods from Washington's first certified organic forest.  This easy lighting charcoal supports your family forest neighbors in sustainable managing their land while bringing you the flavors of the Northwest.
+            p| Forest Farmstead Organic Charcoal is made with a non-polluting 'retort' process that keeps some of the smoke (i.e. flavor) in the wood, and makes it easy to light.  The bits that are too small for charcoal we till into our farm soil as 'biochar,' which means your support of our charcoal production is also sequestering carbon, a small step in addressing climate change, on top of the really short commute the charcoal takes from forest to grill.
+            +sealOrganic
+        //- +sidebar('/images/products/FF Charcoal Seal.png',
+        //-     '8',
+        //-     '2.5lbs bag',
+        //-     'Available direct from farm',
+        //-     'http://store.forestfarmstead.com')
+        //-     strong Flavors Currently Available
+        //-     p Big Leaf Maple
+        //-     p Red Alder
+        //-     p Feral Plum
